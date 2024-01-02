@@ -6,19 +6,15 @@ public class F1 extends Car {
         super(name, 4, 2, 6, isManual, "Sports", 1);
     }
 
+    public int getCurrentGear() {
+        return super.currentGear;
+    }
+
     public void accelerate(int rate) {
         int newSpeed = getCurrentSpeed() + rate;
 
-        /**
-         * Speed categories for gear shifting:
-         * speed 0: gear 1
-         * speed 1-50: gear 1
-         * speed 51-100: gear 2
-         * speed 101-150: gear 3
-         * speed 151-200: gear 4
-         * speed 201-250: gear 5
-         * speed more than 250: gear 6
-         */
+        // Speed categories for gear shifting
+        // ... (same as before)
 
         if (newSpeed <= 0) {
             stop(); // Stop the car, set gear as 1
@@ -38,8 +34,6 @@ public class F1 extends Car {
 
         if (newSpeed > 0) {
             changeSpeed(newSpeed, getCurrentDirection());
-        } else {
-            System.out.println("The car has come to a complete stop.");
         }
     }
 }
