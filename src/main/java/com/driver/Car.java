@@ -56,4 +56,7 @@ public class Car extends Vehicle {
     public void changeSpeed(int newSpeed, int newDirection){
         System.out.println("changeSpeed method called - The speed is changed to: " + newSpeed + ", and the direction is changed to: " + newDirection + " degrees");
     }
+    {
+        System.out.println("I am nikhil kumar");
+    }
 }
